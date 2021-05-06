@@ -19,7 +19,7 @@ select column1, length(column1) as len1,
 column2, length(column2) as len2,
 column3, length(column3) as len3 from ex2_2;
 
-insert into ex2_2 values('ȫ�浿','ȫ�浿','ȫ�浿') ;
-insert into ex2_2 (column3) values('ȫ�浿');
+insert into ex2_2 values('홍길동','홍길동','홍길동') ;
+insert into ex2_2 (column3) values('홍길동');
 
 select column3, length(column3) as len3, length(column3) as bytelen from ex2_2;
