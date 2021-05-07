@@ -5,7 +5,7 @@ column3 nvarchar2(10),
 column4 number
 );
 
---test
+--test --test2
 
 insert into ex2_1 (column1, column2) values('abc','abc');
 
