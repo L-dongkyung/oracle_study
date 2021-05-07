@@ -5,6 +5,8 @@ column3 nvarchar2(10),
 column4 number
 );
 
+--test
+
 insert into ex2_1 (column1, column2) values('abc','abc');
 
 select column1, length(column1) as len1,
