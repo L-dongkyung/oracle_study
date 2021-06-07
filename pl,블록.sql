@@ -13,9 +13,10 @@ begin
 DBMS_OUTPUT.PUT_LINE('a = ' || a);
 END;
 /
+
 declare 
-vs_emp_name varchar2(80) employees.emp_name%type;
-vs_dep_name varchar2(80) departments.department_name%type;
+vs_emp_name varchar2(80);
+vs_dep_name varchar2(80);
 begin
 select a.emp_name, b.department_name
 into vs_emp_name, vs_dep_name
