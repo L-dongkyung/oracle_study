@@ -37,15 +37,15 @@ end;
 exec my_new_job_proc('SM JOB1','Sample JOB1', 999,6000);
 /
 declare 
-    emp_name    varchar2(80);
+    vs_emp_name    varchar2(80);
 begin
-    emp_name := 'hong';
+    vs_emp_name := 'hong';
      update employees
-     set emp_name = emp_name
+     set emp_name = vs_emp_name
      where employee_id = 100;
      
-     select emp_name into emp_name from employees where employee_id = 100;
+     select emp_name into vs_emp_name from employees where employee_id = 100;
      
-     dbms_output.put_line(emp_name);
+     dbms_output.put_line(vs_emp_name);
 end;
 /
