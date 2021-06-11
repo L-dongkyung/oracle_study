@@ -51,7 +51,21 @@ begin
 dbms_output.put_line(last_day(vs_date));
 end;
 /
-exec my_last_day('2021-02-21');
+create or replace function my_last(ps_date varchar2)
+return varchar2
+is
+    vd_date date := to_date(ps_date,'YYYY-MM-DD');
+    vs_start_mon date := trunc(vd_date,'month');
+    vs_next_mon date := add_months(vs_start_mon, 1);
+    vs_return varchar2(100);
+begin
+    vs_return := to_char(vs_next_mon-1,'YYYY-MM-DD');
+    return vs_return;
+end;
+/
+select my_last('2021-12-21') from dual;
+/
+select to_char(1,'99') from dual;
 /
 --4번
 create table ch09_dept(
